@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <!-- #3 must use the component-->
-    <Header bookName="crytpto currency" 
+    <Header bookName="Crypto Currency" 
       authorName="Sundar gali" />
 
 
-    <Bookbox :books="books"  />
+    <Coincrypto :coins="coins"  />
 
 
 
@@ -16,24 +16,23 @@
 
 
 
-//import HelloWorld from './components/HelloWorld.vue'
-// 1
+
 import Header from './components/Header.vue'
-import Bookbox from './components/Bookbox.vue'
+import Coincrypto from './components/Coincrypto.vue'
 
 
-// data url: http://localhost:5555/books , this might be different for you
+
 export default {
   name: 'App',
   components: {
     // 2 register the component 
     Header,
-    Bookbox
+    Coincrypto
   },
 
   data(){
     return {
-      books:[
+      coins:[
         {
 
         }
@@ -43,14 +42,14 @@ export default {
   methods: {
     // promises
 
-      async fetchBooks(){
+      async fetchcoins(){
         
 
         
   
          
-         const res= await fetch('http://localhost:5959/api')
-        console.log('entered');
+         const res= await fetch('https://finalprocrpy.herokuapp.com/api')
+
          const data= await res.json()
          console.log(data)
          return data
@@ -59,7 +58,7 @@ export default {
   },
 
   async created(){
-    this.books = await this.fetchBooks()
+    this.coins = await this.fetchcoins()
   }
 }
 </script>
@@ -76,7 +75,9 @@ export default {
 <style>
 
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -87,13 +88,14 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .container {
-  max-width: 400px;
-  margin: 30px auto;
+  background-color:turquoise;
+  max-width: 500px;
+  margin: 10px auto;
   overflow: auto;
   min-height: 300px;
-  border: 0.3em solid black;
-  padding: 30px;
-  border-radius: 5px;
+  border: 0.2em solid black;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 div{
