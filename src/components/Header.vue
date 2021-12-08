@@ -1,8 +1,8 @@
 <template>
 <div>
-    <h1> {{bookName}} </h1>
+    <h1> {{Projectname}} </h1>
     
-    <h4> {{authorName}} </h4>
+    <h4> {{DonebyName}} </h4>
 </div>
 </template>
 
@@ -11,8 +11,8 @@
 export default{
     name: 'Header',
     props:{
-        bookName: String,
-        authorName:String
+        Projectname: String,
+        DonebyName:String
     }
 }
 

@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <!-- #3 must use the component-->
-    <Header bookName="Crypto Currency" 
-      authorName="Sundar gali" />
+    <Header Projectname="Crypto Currency" 
+      DonebyName="Sundar gali" />
 
 
     <Coincrypto :coins="coins"  />

@@ -17,7 +17,7 @@
 </template>
 
 <script>
-// book -- coincryp
+
 export default{
     name: 'COIN',
     props:{
